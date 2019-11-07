@@ -57,6 +57,7 @@ public final class HTTPServer: Server {
         public init(
             hostname: String = "127.0.0.1",
             port: Int = 8080,
+            socket: String = "/tmp/myservice.socket",
             backlog: Int = 256,
             maxBodySize: Int = 1 << 14,
             reuseAddress: Bool = true,
@@ -71,6 +72,7 @@ public final class HTTPServer: Server {
         ) {
             self.hostname = hostname
             self.port = port
+            self.socket = socket
             self.backlog = backlog
             self.maxBodySize = maxBodySize
             self.reuseAddress = reuseAddress
